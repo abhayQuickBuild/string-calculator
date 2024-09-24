@@ -9,7 +9,7 @@ export function add(numbers) {
     }
 
     const numArray = numbers.split(delimiter);
-    const output = numArray.flatMap(item => item.split('\\n').map(Number));
+    const output = numArray.flatMap(item => item.split('\\n').map(Number).filter(num => num <= 1000));
 
     const negatives = output.filter((num) => num < 0);
     if (negatives.length > 0) {

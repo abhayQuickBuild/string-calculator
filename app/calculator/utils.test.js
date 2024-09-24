@@ -23,3 +23,7 @@ test('should throw an error for negative numbers', () => {
 test('should return 3 for "//;\n1;2"', () => {
     expect(add("//;\n1;2")).toBe(3);
   });
+
+  test('should return 3 for "//;\n1;2"', () => {
+    expect(add("1001,2")).toBe(2);
+  });
