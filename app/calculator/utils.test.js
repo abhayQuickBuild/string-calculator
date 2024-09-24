@@ -1,4 +1,4 @@
-import { add } from './stringCalculator';
+import { add } from './utils';
 
 test('should return 0 for an empty string', () => {
   expect(add("")).toBe(0);
@@ -19,3 +19,7 @@ test('should handle different delimiters', () => {
 test('should throw an error for negative numbers', () => {
   expect(() => add("1,-2")).toThrow('negative numbers not allowed: -2');
 });
+
+test('should return 3 for "//;\n1;2"', () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });
